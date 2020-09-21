@@ -36,3 +36,8 @@ async def update_item(*, item_id: int, offers: List[Offer]):
 @app.post("/index-weights/")
 async def create_index_weights(weights: Dict[int, float]):
     return weights
+
+
+@app.post("/image")
+async def get_image_details(image: Image):
+    return {"image": image}
